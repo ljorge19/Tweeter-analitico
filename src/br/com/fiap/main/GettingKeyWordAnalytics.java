@@ -21,7 +21,7 @@ import twitter4j.auth.AccessToken;
 public class GettingKeyWordAnalytics {
 
 	public static void main(String[] args) {
-
+		String queryDoTwitar = "";
 		int contadorPrimeiroUsuario = 0;
 		int contadorPrimeiroData = 0;
 		List<Status> listaTweets = new ArrayList<>();
@@ -59,6 +59,7 @@ public class GettingKeyWordAnalytics {
 			while (gCalendarInicio.before(gCalendarAgora)) {
 
 				Query query = new Query("#java8");
+				queryDoTwitar = query.toString();
 				GregorianCalendar gCalendarAnterior = new GregorianCalendar();
 				gCalendarAnterior.setTime(gCalendarInicio.getTime());
 				gCalendarAnterior.add(GregorianCalendar.DAY_OF_MONTH, -1);
@@ -83,15 +84,17 @@ public class GettingKeyWordAnalytics {
 						listaTweets.add(status);
 
 						// caso queira ver todas informações
-						/*System.out.println("-----------------------------------------------");
-						System.out.println("Usuário: " + status.getUser().getScreenName());
-						System.out.println("Mensagem: " + status.getText());
-						System.out.println("Data de Criação: " + status.getCreatedAt());
-						System.out.println("Número de Favoritos: " + status.getFavoriteCount());
-						System.out.println("Geolocalização: " + status.getGeoLocation());
-						System.out.println("Lugar: " + status.getPlace());
-						System.out.println("Número de Retweets: " + status.getRetweetCount());
-						System.out.println("-----------------------------------------------\n");*/
+						
+						  System.out.println("-----------------------------------------------");
+						  System.out.println("Usuário: " + status.getUser().getScreenName());
+						  System.out.println("Mensagem: " + status.getText());
+						  System.out.println("Data de Criação: " + status.getCreatedAt());
+						  System.out.println("Número de Favoritos: " + status.getFavoriteCount());
+						  System.out.println("Geolocalização: " + status.getGeoLocation());
+						  System.out.println("Lugar: " + status.getPlace());
+						  System.out.println("Número de Retweets: " + status.getRetweetCount());
+						  System.out.println("-----------------------------------------------\n");
+						 
 
 						qtdTweetsTemp++;
 						qtdReTweetsTemp = qtdReTweetsTemp + status.getRetweetCount();
@@ -257,33 +260,33 @@ public class GettingKeyWordAnalytics {
 
 		String mensagemFinal =
 
-				"\n" + " qtdTweets:  " + quantidade.getQtdtweetsDia1() + "\n" + " qtdFavoritos:  "
+				"\n" + " qtdTweets " + queryDoTwitar + ":  " + quantidade.getQtdtweetsDia1() + "\n" + " qtdFavoritos:  "
 						+ quantidade.getQtdLikesDia1() + "\n" + " qtdretweet: " + quantidade.getQtdRetweetsDia1() + "\n"
 						+ " dia: " + dia1 + "\n" +
 
-						"\n" + " qtdTweets:  " + quantidade.getQtdtweetsDia2() + "\n" + " qtdFavoritos:  "
-						+ quantidade.getQtdLikesDia2() + "\n" + " qtdretweet: " + quantidade.getQtdRetweetsDia2() + "\n"
-						+ " dia: " + dia2 + "\n" +
+						"\n" + " qtdTweets " + queryDoTwitar + ":  " + quantidade.getQtdtweetsDia2() + "\n"
+						+ " qtdFavoritos:  " + quantidade.getQtdLikesDia2() + "\n" + " qtdretweet: "
+						+ quantidade.getQtdRetweetsDia2() + "\n" + " dia: " + dia2 + "\n" +
 
-						"\n" + " qtdTweets:  " + quantidade.getQtdtweetsDia3() + "\n" + " qtdFavoritos:  "
-						+ quantidade.getQtdLikesDia3() + "\n" + " qtdretweet: " + quantidade.getQtdRetweetsDia3() + "\n"
-						+ " dia: " + dia3 + "\n" +
+						"\n" + " qtdTweets " + queryDoTwitar + ":  " + quantidade.getQtdtweetsDia3() + "\n"
+						+ " qtdFavoritos:  " + quantidade.getQtdLikesDia3() + "\n" + " qtdretweet: "
+						+ quantidade.getQtdRetweetsDia3() + "\n" + " dia: " + dia3 + "\n" +
 
-						"\n" + " qtdTweets:  " + quantidade.getQtdtweetsDia4() + "\n" + " qtdFavoritos:  "
-						+ quantidade.getQtdLikesDia4() + "\n" + " qtdretweet: " + quantidade.getQtdRetweetsDia4() + "\n"
-						+ " dia: " + dia4 + "\n" +
+						"\n" + " qtdTweets " + queryDoTwitar + ":  " + quantidade.getQtdtweetsDia4() + "\n"
+						+ " qtdFavoritos:  " + quantidade.getQtdLikesDia4() + "\n" + " qtdretweet: "
+						+ quantidade.getQtdRetweetsDia4() + "\n" + " dia: " + dia4 + "\n" +
 
-						"\n" + " qtdTweets:  " + quantidade.getQtdtweetsDia5() + "\n" + " qtdFavoritos:  "
-						+ quantidade.getQtdLikesDia5() + "\n" + " qtdretweet: " + quantidade.getQtdRetweetsDia5() + "\n"
-						+ " dia: " + dia5 + "\n" +
+						"\n" + " qtdTweets " + queryDoTwitar + ":  " + quantidade.getQtdtweetsDia5() + "\n"
+						+ " qtdFavoritos:  " + quantidade.getQtdLikesDia5() + "\n" + " qtdretweet: "
+						+ quantidade.getQtdRetweetsDia5() + "\n" + " dia: " + dia5 + "\n" +
 
-						"\n" + " qtdTweets:  " + quantidade.getQtdtweetsDia6() + "\n" + " qtdFavoritos:  "
-						+ quantidade.getQtdLikesDia6() + "\n" + " qtdretweet: " + quantidade.getQtdRetweetsDia6() + "\n"
-						+ " dia: " + dia6 + "\n" +
+						"\n" + " qtdTweets " + queryDoTwitar + ":  " + quantidade.getQtdtweetsDia6() + "\n"
+						+ " qtdFavoritos:  " + quantidade.getQtdLikesDia6() + "\n" + " qtdretweet: "
+						+ quantidade.getQtdRetweetsDia6() + "\n" + " dia: " + dia6 + "\n" +
 
-						"\n" + " qtdTweets:  " + quantidade.getQtdtweetsDia7() + "\n" + " qtdFavoritos:  "
-						+ quantidade.getQtdLikesDia7() + "\n" + " qtdretweet: " + quantidade.getQtdRetweetsDia7() + "\n"
-						+ " dia: " + dia7 + "\n" +
+						"\n" + " qtdTweets" + queryDoTwitar + ":  " + quantidade.getQtdtweetsDia7() + "\n"
+						+ " qtdFavoritos:  " + quantidade.getQtdLikesDia7() + "\n" + " qtdretweet: "
+						+ quantidade.getQtdRetweetsDia7() + "\n" + " dia: " + dia7 + "\n" +
 
 						"\n" + " primeiro User: " + quantidade.getPrimeiroUsuario() + "\n" + " ultimo user: "
 						+ quantidade.getUltimoUsuario() + "\n" +
@@ -298,8 +301,8 @@ public class GettingKeyWordAnalytics {
 						+ " dia: " + dia1 + "\n";
 
 		try {
-			DirectMessage message1 = twitter.sendDirectMessage("@michelpf", tweet1);
-			// Status status = twitter.updateStatus(tweet1);
+			// DirectMessage message1 = twitter.sendDirectMessage("@michelpf", tweet1);
+			Status status = twitter.updateStatus(tweet1 + "@michelpf");
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("Erro ao postar DM \n");
@@ -313,8 +316,8 @@ public class GettingKeyWordAnalytics {
 						+ " dia: " + dia2 + "\n";
 
 		try {
-			DirectMessage message1 = twitter.sendDirectMessage("@michelpf", tweet2);
-			// Status status = twitter.updateStatus(tweet2);
+			// DirectMessage message1 = twitter.sendDirectMessage("@michelpf", tweet2);
+			Status status = twitter.updateStatus(tweet2 + "@michelpf");
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("Erro ao postar DM \n");
@@ -328,8 +331,8 @@ public class GettingKeyWordAnalytics {
 						+ " dia: " + dia3 + "\n";
 
 		try {
-			DirectMessage message1 = twitter.sendDirectMessage("@michelpf", tweet3);
-			// Status status = twitter.updateStatus(tweet3);
+			// DirectMessage message1 = twitter.sendDirectMessage("@michelpf", tweet3);
+			Status status = twitter.updateStatus(tweet3 + "@michelpf");
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("Erro ao postar DM \n");
@@ -343,8 +346,8 @@ public class GettingKeyWordAnalytics {
 						+ " dia: " + dia4 + "\n";
 
 		try {
-			DirectMessage message1 = twitter.sendDirectMessage("@michelpf", tweet4);
-			// Status status = twitter.updateStatus(tweet4);
+			// DirectMessage message1 = twitter.sendDirectMessage("@michelpf", tweet4);
+			Status status = twitter.updateStatus(tweet4 + "@michelpf");
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("Erro ao postar DM \n");
@@ -358,8 +361,8 @@ public class GettingKeyWordAnalytics {
 						+ " dia: " + dia5 + "\n";
 
 		try {
-			DirectMessage message1 = twitter.sendDirectMessage("@michelpf", tweet5);
-			// Status status = twitter.updateStatus(tweet5);
+			// DirectMessage message1 = twitter.sendDirectMessage("@michelpf", tweet5);
+			Status status = twitter.updateStatus(tweet5 + "@michelpf");
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("Erro ao postar DM \n");
@@ -373,8 +376,8 @@ public class GettingKeyWordAnalytics {
 						+ " dia: " + dia6 + "\n";
 
 		try {
-			DirectMessage message1 = twitter.sendDirectMessage("@michelpf", tweet6);
-			// Status status = twitter.updateStatus(tweet6);
+			// DirectMessage message1 = twitter.sendDirectMessage("@michelpf", tweet6);
+			Status status = twitter.updateStatus(tweet6 + "@michelpf");
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("Erro ao postar DM \n");
@@ -388,13 +391,32 @@ public class GettingKeyWordAnalytics {
 						+ " dia: " + dia7 + "\n";
 
 		try {
-			DirectMessage message1 = twitter.sendDirectMessage("@michelpf", tweet7);
-			// Status status = twitter.updateStatus(tweet7);
+			// DirectMessage message1 = twitter.sendDirectMessage("@michelpf", tweet7);
+			Status status = twitter.updateStatus(tweet7 + "@michelpf");
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("Erro ao postar DM \n");
 
 		}
+
+		String tweet8 =
+
+				"\n" + " primeiro User: " + quantidade.getPrimeiroUsuario() + "\n" + " ultimo user: "
+						+ quantidade.getUltimoUsuario() + "\n" +
+
+						"\n" + " primeira data: " + quantidade.getPrimeiroData() + "\n" + " ultima   data: "
+						+ quantidade.getUltimaData() + "";
+
+		try {
+			// DirectMessage message1 = twitter.sendDirectMessage("@michelpf", tweet7);
+			Status status = twitter.updateStatus(tweet8 + "@michelpf");
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("Erro ao postar DM \n");
+
+		}
+
+		;
 
 	}
 }

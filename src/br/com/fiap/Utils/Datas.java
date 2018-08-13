@@ -5,7 +5,7 @@ import java.util.Calendar;
 
 public class Datas {
 
-	
+	/*
 public static String getDataFinal(){
 		
 	    Calendar dataInicial = Calendar.getInstance();
@@ -16,7 +16,7 @@ public static String getDataFinal(){
 		
 		return dataFormatadaFinal;
 		}
-	
+	*/
 	
 	
    public static String getDataInicial(){
