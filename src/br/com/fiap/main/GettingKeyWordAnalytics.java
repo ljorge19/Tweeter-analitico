@@ -84,7 +84,7 @@ public class GettingKeyWordAnalytics {
 						listaTweets.add(status);
 
 						// caso queira ver todas informações
-						
+						/*
 						  System.out.println("-----------------------------------------------");
 						  System.out.println("Usuário: " + status.getUser().getScreenName());
 						  System.out.println("Mensagem: " + status.getText());
@@ -94,7 +94,7 @@ public class GettingKeyWordAnalytics {
 						  System.out.println("Lugar: " + status.getPlace());
 						  System.out.println("Número de Retweets: " + status.getRetweetCount());
 						  System.out.println("-----------------------------------------------\n");
-						 
+						 */
 
 						qtdTweetsTemp++;
 						qtdReTweetsTemp = qtdReTweetsTemp + status.getRetweetCount();
@@ -258,42 +258,8 @@ public class GettingKeyWordAnalytics {
 
 		}
 
-		String mensagemFinal =
-
-				"\n" + " qtdTweets " + queryDoTwitar + ":  " + quantidade.getQtdtweetsDia1() + "\n" + " qtdFavoritos:  "
-						+ quantidade.getQtdLikesDia1() + "\n" + " qtdretweet: " + quantidade.getQtdRetweetsDia1() + "\n"
-						+ " dia: " + dia1 + "\n" +
-
-						"\n" + " qtdTweets " + queryDoTwitar + ":  " + quantidade.getQtdtweetsDia2() + "\n"
-						+ " qtdFavoritos:  " + quantidade.getQtdLikesDia2() + "\n" + " qtdretweet: "
-						+ quantidade.getQtdRetweetsDia2() + "\n" + " dia: " + dia2 + "\n" +
-
-						"\n" + " qtdTweets " + queryDoTwitar + ":  " + quantidade.getQtdtweetsDia3() + "\n"
-						+ " qtdFavoritos:  " + quantidade.getQtdLikesDia3() + "\n" + " qtdretweet: "
-						+ quantidade.getQtdRetweetsDia3() + "\n" + " dia: " + dia3 + "\n" +
-
-						"\n" + " qtdTweets " + queryDoTwitar + ":  " + quantidade.getQtdtweetsDia4() + "\n"
-						+ " qtdFavoritos:  " + quantidade.getQtdLikesDia4() + "\n" + " qtdretweet: "
-						+ quantidade.getQtdRetweetsDia4() + "\n" + " dia: " + dia4 + "\n" +
-
-						"\n" + " qtdTweets " + queryDoTwitar + ":  " + quantidade.getQtdtweetsDia5() + "\n"
-						+ " qtdFavoritos:  " + quantidade.getQtdLikesDia5() + "\n" + " qtdretweet: "
-						+ quantidade.getQtdRetweetsDia5() + "\n" + " dia: " + dia5 + "\n" +
-
-						"\n" + " qtdTweets " + queryDoTwitar + ":  " + quantidade.getQtdtweetsDia6() + "\n"
-						+ " qtdFavoritos:  " + quantidade.getQtdLikesDia6() + "\n" + " qtdretweet: "
-						+ quantidade.getQtdRetweetsDia6() + "\n" + " dia: " + dia6 + "\n" +
-
-						"\n" + " qtdTweets" + queryDoTwitar + ":  " + quantidade.getQtdtweetsDia7() + "\n"
-						+ " qtdFavoritos:  " + quantidade.getQtdLikesDia7() + "\n" + " qtdretweet: "
-						+ quantidade.getQtdRetweetsDia7() + "\n" + " dia: " + dia7 + "\n" +
-
-						"\n" + " primeiro User: " + quantidade.getPrimeiroUsuario() + "\n" + " ultimo user: "
-						+ quantidade.getUltimoUsuario() + "\n" +
-
-						"\n" + " primeira data: " + quantidade.getPrimeiroData() + "\n" + " ultima   data: "
-						+ quantidade.getUltimaData();
-
+		
+		
 		String tweet1 =
 
 				"\n" + " qtdTweets:  " + quantidade.getQtdtweetsDia1() + "\n" + " qtdFavoritos:  "
@@ -305,7 +271,7 @@ public class GettingKeyWordAnalytics {
 			Status status = twitter.updateStatus(tweet1 + "@michelpf");
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("Erro ao postar DM \n");
+			System.out.println("bloqueio de postagem pelo twitter, pedido em analise para o desbloqueio, aguardando aprovação \n");
 
 		}
 
@@ -320,7 +286,7 @@ public class GettingKeyWordAnalytics {
 			Status status = twitter.updateStatus(tweet2 + "@michelpf");
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("Erro ao postar DM \n");
+			System.out.println("bloqueio de postagem pelo twitter, pedido em analise para o desbloqueio, aguardando aprovação \n");
 
 		}
 
@@ -335,7 +301,7 @@ public class GettingKeyWordAnalytics {
 			Status status = twitter.updateStatus(tweet3 + "@michelpf");
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("Erro ao postar DM \n");
+			System.out.println("bloqueio de postagem pelo twitter, pedido em analise para o desbloqueio, aguardando aprovação \n");
 
 		}
 
@@ -350,7 +316,7 @@ public class GettingKeyWordAnalytics {
 			Status status = twitter.updateStatus(tweet4 + "@michelpf");
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("Erro ao postar DM \n");
+			System.out.println("bloqueio de postagem pelo twitter, pedido em analise para o desbloqueio, aguardando aprovação \n");
 
 		}
 
@@ -365,7 +331,7 @@ public class GettingKeyWordAnalytics {
 			Status status = twitter.updateStatus(tweet5 + "@michelpf");
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("Erro ao postar DM \n");
+			System.out.println("bloqueio de postagem pelo twitter, pedido em analise para o desbloqueio, aguardando aprovação \n");
 
 		}
 
@@ -380,7 +346,7 @@ public class GettingKeyWordAnalytics {
 			Status status = twitter.updateStatus(tweet6 + "@michelpf");
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("Erro ao postar DM \n");
+			System.out.println("bloqueio de postagem pelo twitter, pedido em analise para o desbloqueio, aguardando aprovação \n");
 
 		}
 
@@ -395,7 +361,7 @@ public class GettingKeyWordAnalytics {
 			Status status = twitter.updateStatus(tweet7 + "@michelpf");
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("Erro ao postar DM \n");
+			System.out.println("bloqueio de postagem pelo twitter, pedido em analise para o desbloqueio, aguardando aprovação \n");
 
 		}
 
@@ -412,9 +378,57 @@ public class GettingKeyWordAnalytics {
 			Status status = twitter.updateStatus(tweet8 + "@michelpf");
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("Erro ao postar DM \n");
+			System.out.println("bloqueio de postagem pelo twitter, pedido em analise para o desbloqueio, aguardando aprovação \n");
+
 
 		}
+		
+		
+		System.out.println("*********************************************************************************************************************************************");
+		System.out.println("Relatório de Dados analíticos gerados através da hashtag solicitada");
+		System.out.println("*********************************************************************************************************************************************");
+		
+		String mensagemFinal =
+
+				"\n" + " qtdTweets :  " + quantidade.getQtdtweetsDia1() + "\n" + " qtdFavoritos:  "
+						+ quantidade.getQtdLikesDia1() + "\n" + " qtdretweet: " + quantidade.getQtdRetweetsDia1() + "\n"
+						+ " dia: " + dia1 + "\n" +
+
+						"\n" + " qtdTweets :  " + quantidade.getQtdtweetsDia2() + "\n"
+						+ " qtdFavoritos:  " + quantidade.getQtdLikesDia2() + "\n" + " qtdretweet: "
+						+ quantidade.getQtdRetweetsDia2() + "\n" + " dia: " + dia2 + "\n" +
+
+						"\n" + " qtdTweets " + quantidade.getQtdtweetsDia3() + "\n"
+						+ " qtdFavoritos:  " + quantidade.getQtdLikesDia3() + "\n" + " qtdretweet: "
+						+ quantidade.getQtdRetweetsDia3() + "\n" + " dia: " + dia3 + "\n" +
+
+						"\n" + " qtdTweets " + quantidade.getQtdtweetsDia4() + "\n"
+						+ " qtdFavoritos:  " + quantidade.getQtdLikesDia4() + "\n" + " qtdretweet: "
+						+ quantidade.getQtdRetweetsDia4() + "\n" + " dia: " + dia4 + "\n" +
+
+						"\n" + " qtdTweets " + quantidade.getQtdtweetsDia5() + "\n"
+						+ " qtdFavoritos:  " + quantidade.getQtdLikesDia5() + "\n" + " qtdretweet: "
+						+ quantidade.getQtdRetweetsDia5() + "\n" + " dia: " + dia5 + "\n" +
+
+						"\n" + " qtdTweets " + quantidade.getQtdtweetsDia6() + "\n"
+						+ " qtdFavoritos:  " + quantidade.getQtdLikesDia6() + "\n" + " qtdretweet: "
+						+ quantidade.getQtdRetweetsDia6() + "\n" + " dia: " + dia6 + "\n" +
+
+						"\n" + " qtdTweets " + quantidade.getQtdtweetsDia7() + "\n"
+						+ " qtdFavoritos:  " + quantidade.getQtdLikesDia7() + "\n" + " qtdretweet: "
+						+ quantidade.getQtdRetweetsDia7() + "\n" + " dia: " + dia7 + "\n" +
+
+						"\n" + " primeiro User: " + quantidade.getPrimeiroUsuario() + "\n" + " ultimo user: "
+						+ quantidade.getUltimoUsuario() + "\n" +
+
+						"\n" + " primeira data: " + quantidade.getPrimeiroData() + "\n" + " ultima   data: "
+						+ quantidade.getUltimaData();
+
+		
+		System.out.println(mensagemFinal);
+		System.out.println("\n");
+		System.out.println("*********************************************************************************************************************************************");
+		
 
 		;
 
