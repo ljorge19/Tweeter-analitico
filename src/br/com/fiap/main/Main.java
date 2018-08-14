@@ -84,7 +84,7 @@ public class Main {
 						listaTweets.add(status);
 
 						// caso queira ver todas informações
-						
+						/*
 						  System.out.println("-----------------------------------------------");
 						  System.out.println("Usuário: " + status.getUser().getScreenName());
 						  System.out.println("Mensagem: " + status.getText());
@@ -95,7 +95,7 @@ public class Main {
 						  System.out.println("Número de Retweets: " + status.getRetweetCount());
 						  System.out.println("-----------------------------------------------\n");
 						 
-
+*/
 						qtdTweetsTemp++;
 						qtdReTweetsTemp = qtdReTweetsTemp + status.getRetweetCount();
 						qtdLikesTemp = qtdLikesTemp + status.getFavoriteCount();
