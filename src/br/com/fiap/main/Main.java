@@ -94,8 +94,8 @@ public class Main {
 						  System.out.println("Lugar: " + status.getPlace());
 						  System.out.println("Número de Retweets: " + status.getRetweetCount());
 						  System.out.println("-----------------------------------------------\n");
-						 
-*/
+						 */
+
 						qtdTweetsTemp++;
 						qtdReTweetsTemp = qtdReTweetsTemp + status.getRetweetCount();
 						qtdLikesTemp = qtdLikesTemp + status.getFavoriteCount();
@@ -385,7 +385,7 @@ public class Main {
 		
 		
 		System.out.println("*********************************************************************************************************************************************");
-		System.out.println("Relatório de Dados analíticos gerados através da hashtag solicitada");
+		System.out.println("Relatório de Dados analíticos gerados através da hashtag #java8 ");
 		System.out.println("*********************************************************************************************************************************************");
 		
 		String mensagemFinal =
